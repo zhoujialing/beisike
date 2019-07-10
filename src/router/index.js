@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import global from "@/core/global"
+// console.log(global.getParam())
 Vue.use(Router)
 
  const routers=new Router({

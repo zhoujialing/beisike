@@ -4,13 +4,28 @@
 
 const path = require('path')
 
+// https://m.bestcake.com/
+// https://m.bestcake.com/
+// const URL = "https://cnodejs.org";
+const URL = "https://m.bestcake.com";
 module.exports = {
   dev: {
 
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+
+    // 配置webpack 代理
+    proxyTable: {
+      '/apis': {
+        target: URL, // 需要进行代理跨域主机
+        secure: true, // 如果是https接口，需要配置这个参数
+        changeOrigin: true, //是否跨域
+        pathRewrite: {
+          '^/apis': '' //请求结束 将url里面 /apis重写成""        https://cnodejs.org/api/v1/topics
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: '0.0.0.0', // can be overwritten by process.env.HOST
@@ -20,7 +35,7 @@ module.exports = {
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
-    
+
     /**
      * Source Maps
      */
@@ -43,7 +58,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
 
     /**
      * Source Maps
