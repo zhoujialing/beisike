@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import 'lib-flexible/flexible.js'
+import 'font-awesome/css/font-awesome.css'
 
 import store from "@/core/store"
 

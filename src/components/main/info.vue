@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div>我是信息页</div>
+    <div>我是信息页<i class="fa fa-weixin fa-lg" style="color:red;"></i> </div>
+
     <!-- 读statet   Vue_data -->
     <h1>名字:{{$store.state.name}}</h1>
     <h2>单价:{{$store.state.price}}</h2>
