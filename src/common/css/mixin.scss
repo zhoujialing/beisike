@@ -93,7 +93,7 @@
 	justify-content: center;
 }
 
-// flexbal
+// flexbal 基于苹果6 
 $fontSize:75;
 @function r($px){
 	@return $px/$fontSize+rem;

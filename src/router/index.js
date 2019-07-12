@@ -16,6 +16,10 @@ Vue.use(Router)
         {
           path:"info",
           name: 'info',
+          meta:{
+            keepAlive:true
+          },
+          //keepAlive true 禁止重复加载  false不禁止
           component: resolve => require(['@/components/main/info'], resolve)
         },
         {

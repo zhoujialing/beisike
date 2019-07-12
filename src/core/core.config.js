@@ -1,4 +1,5 @@
 
+import Vue from 'vue'
 import directive from "@/core/directive"
 import commonTemp from "@/components/commonTemp"
 import global from "@/core/global"
@@ -11,4 +12,5 @@ export default (Vue) => {
     commonTemp(Vue);
     Vue.prototype.$global=global;
     Vue.prototype.$apis=apis;
+    Vue.prototype.$eventHub=new Vue();
 }

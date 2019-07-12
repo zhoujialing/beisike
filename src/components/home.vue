@@ -1,7 +1,13 @@
 <template>
   <div>
     <lay_head></lay_head>
-     <router-view/>
+    <keep-alive>
+         <router-view v-if="$route.meta.keepAlive"/>
+     </keep-alive>
+     <router-view v-if="!$route.meta.keepAlive"/>
+     
+      <!-- keepAlive true 禁止重复加载  false不禁止-->
+     <!-- <div class="box" v-if="$route.meta.name=='ok'?true:false"></div> -->
   </div>
 </template>
 
@@ -13,6 +19,11 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  mounted(){
+      this.$eventHub.$on("test",(res)=>{
+        alert(res);
+      });
   },
   components:{
     lay_head
@@ -36,4 +47,5 @@ li {
 a {
   color: #42b983;
 }
+
 </style>

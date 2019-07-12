@@ -2,7 +2,7 @@
   <div>
     <div>我是测试页</div>
     <item1></item1>
-    <button v-test>test</button>
+    <button @click="test">test</button>
   </div>
 </template>
 
@@ -12,7 +12,12 @@ export default {
     return {};
   },
   mounted() {
-    console.log(this.$route);
+    
+  },
+  methods:{
+      test(){
+        this.$eventHub.$emit("test","haha");
+      }
   }
 };
 </script>
