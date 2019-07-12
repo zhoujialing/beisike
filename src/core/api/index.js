@@ -1,8 +1,6 @@
 import request from "./http"
-// console.dir(request)
-// import axios from "axios"
-// console.dir(axios);
-// https://cnodejs.org
+import mock from  "@/mock"
+
 class Apis {
     
     // json1811.ashx?v=1562741893374&c=NewIndexController&m=index
@@ -33,9 +31,11 @@ class Apis {
         // data 传默认  fromData
         // 设置请求头    application/x-www-form-urlencoded   Request payload  
         // $GET["xxxx"]
-
     }
-
-
+    login(data){
+        return mock.get("/login",{
+          params: data
+        })
+    }
 }
 export default new Apis();

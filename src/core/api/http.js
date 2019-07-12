@@ -4,7 +4,7 @@ const baseURL=location.host.indexOf(".com")!=-1?"":"/apis";
 // const baseURL= location.host.indexOf("8899")!=-1?"/apis":"";
 // const baseURL="/apis";
 
-console.log();
+
 // https://cnodejs.org
 var instance = axios.create({
     // 设置主机

@@ -3,6 +3,7 @@
 import Vuex from "vuex";
 import Vue from "vue";
 import apis from "@/core/api"
+import { Indicator } from 'mint-ui';
 Vue.use(Vuex);
 // Vuex作用是什么? 全局状态管理
 
@@ -39,7 +40,9 @@ const actions={
     },
     test2(context,data){
         console.log("run");
+        Indicator.open("加载中...")
       setTimeout(()=>{
+        Indicator.close()
         context.state.isTopic=true;
       },5000)
     }

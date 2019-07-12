@@ -17,7 +17,6 @@ import core from "@/core/core.config"
 Vue.use(core);
 
 Vue.config.productionTip = false
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

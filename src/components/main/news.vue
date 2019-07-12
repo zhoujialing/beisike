@@ -26,6 +26,16 @@ export default {
     // let testObj={name:"Msea"}
     // let obj={...testObj}
     // 对象的深度拷贝
+    // 对象比较是比较内存地址
+
+    // function test(a,b,c){
+    //   console.log(a,b,c);
+    // }
+    // var arr=[1,2,3]
+    // var testArr=[];
+    // testArr.push(...arr);
+    // console.log(testArr);
+    // test(...arr);
   },
   // computed:{name(){}},
   computed: {
